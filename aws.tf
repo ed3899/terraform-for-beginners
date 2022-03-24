@@ -12,16 +12,16 @@ resource "aws_iam_user" "admin-user" {
   }
 }
 
-# resource "aws_iam_policy" "adminUser" {
-#   name = "AdminUsers"
-#   policy = jsonencode({
-#     "Version" : "2012-10-17",
-#     "Statement" : [
-#       {
-#         "Effect" : "Allow",
-#         "Action" : "*",
-#         "Resource" : "*"
-#       }
-#     ]
-#   })
-# }
+resource "aws_iam_policy" "adminUser" {
+  name = "AdminUsers"
+  policy = jsonencode({
+    "Version" : "2012-10-17",
+    "Statement" : [
+      {
+        "Effect" : "Allow",
+        "Action" : "*",
+        "Resource" : "*"
+      }
+    ]
+  })
+}
